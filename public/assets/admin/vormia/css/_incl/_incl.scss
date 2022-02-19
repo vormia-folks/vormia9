@@ -1,0 +1,25 @@
+// Functions
+@function getColor($color_name, $map: $colors) {
+    @return map-get($map, $color_name);
+}
+
+// Get lenth of Colors Array
+@function getLength($map: $colors) {
+    @return map-size($map);
+}
+
+// Method colorsCode
+@mixin colorsCode($map: $colors) {
+    @each $name, $colorcode in $map {
+        .vma-color-#{$name} {
+            color: $colorcode !important;
+        }
+    }
+
+    // Background Color
+    @each $name, $colorcode in $map {
+        .vma-bg-color-#{$name} {
+            color: $colorcode !important;
+        }
+    }
+}

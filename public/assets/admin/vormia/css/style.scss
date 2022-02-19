@@ -1,0 +1,74 @@
+// Include Pre Functions
+@import "_incl/colors";
+@import "_incl/incl";
+
+.vma-logo-text,
+.vma-logo-text-admin {
+    margin-bottom: 20px !important;
+
+    /* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+    @media (min-width: 5px) and (max-width: 650px) {
+        span {
+            font-family: "Monoton", cursive;
+            font-size: 1em;
+            vertical-align: middle !important;
+            //font-weight: bold;
+        }
+    }
+
+    @media (min-width: 650px) {
+        img {
+            width: 25%;
+            height: auto !important;
+            display: inline-flex;
+        }
+        span {
+            font-family: "Monoton", cursive;
+            font-size: 2.5em;
+            vertical-align: middle !important;
+            //font-weight: bold;
+        }
+    }
+}
+
+.vma-logo-text-admin {
+    margin-bottom: 0px !important;
+
+    @media (min-width: 650px) {
+        img {
+            width: 25%;
+        }
+        span {
+            font-size: 1.3em;
+        }
+    }
+}
+
+#auth #auth-right {
+    height: 100%;
+    background: url(../img/login/kilimanjaro.jpeg),
+        linear-gradient(90deg, #2d499d, #3f5491);
+    background-size: cover;
+    align-self: center;
+    background-position-x: center;
+}
+
+h1.auth-title,
+.forgot-pass {
+    font-size: 2rem !important;
+}
+
+p.auth-subtitle {
+    font-size: 1rem !important;
+}
+
+/** Sidebar **/
+.vma-sidebar-header {
+    padding-bottom: 2px !important;
+}
+
+// Vormia Colors
+@include colorsCode();
